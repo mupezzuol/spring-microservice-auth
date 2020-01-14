@@ -1,2 +1,21 @@
 server:
   port: 8088
+
+spring:
+  application:
+    name: 'auth'
+  boot:
+    admin:
+      client:
+        url:
+        - http://localhost:8082
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*"
+  endpoint:
+    health:
+      show-details: always
